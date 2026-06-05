@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  source    String   // "discord" or "twitter"
+  sourceId  String   @unique // The original message ID from Discord or Twitter
+  author    String   // Username or handle
+  authorId  String?  // Optional ID of the author
+  channel   String?  // Channel name or ID for Discord, or timeline for Twitter
+  content   String   // The text content
+  mediaUrls String?  // JSON stringified array of image/media URLs
+  timestamp DateTime // When the message was posted
+
+  createdAt DateTime @default(now())
+}

@@ -1,17 +1,29 @@
 {
-  "name": "temp-app",
+  "name": "socialmedialistener",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "listener": "tsx --env-file=.env listener/index.ts",
+    "scrape": "tsx --env-file=.env listener/scraper.ts"
   },
   "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@prisma/client": "^7.6.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "discord.js": "^14.25.1",
+    "dotenv": "^17.3.1",
+    "lucide-react": "^1.7.0",
     "next": "16.2.1",
+    "puppeteer": "^24.40.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "tailwind-merge": "^3.5.0",
+    "twitter-api-v2": "^1.29.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -20,7 +32,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
+    "prisma": "^7.6.0",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

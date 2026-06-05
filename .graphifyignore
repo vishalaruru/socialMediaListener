@@ -1,0 +1,18 @@
+# Ignore data folders
+scraped_data/
+data.json
+dev.db
+dev.db-journal
+
+# Ignore build and cache folders
+.next/
+node_modules/
+graphify-out/
+.git/
+
+# Ignore public and other static asset folders
+public/
+package-lock.json
+
+# Ignore env configs
+.env*
